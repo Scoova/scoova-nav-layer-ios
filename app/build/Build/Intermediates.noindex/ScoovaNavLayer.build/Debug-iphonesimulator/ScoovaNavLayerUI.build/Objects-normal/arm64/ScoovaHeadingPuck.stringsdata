@@ -1,0 +1,16 @@
+{
+  "source": "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerUI/ScoovaHeadingPuck.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Heading %lld degrees",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 33
+        }
+      }
+    ]
+  },
+  "version": 1
+}

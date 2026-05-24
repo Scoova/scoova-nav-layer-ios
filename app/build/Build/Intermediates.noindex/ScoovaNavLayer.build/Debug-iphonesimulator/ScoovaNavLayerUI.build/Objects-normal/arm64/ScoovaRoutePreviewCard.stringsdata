@@ -1,0 +1,24 @@
+{
+  "source": "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerUI/ScoovaRoutePreviewCard.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Planning route…",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 57
+        }
+      },
+      {
+        "comment": "",
+        "key": "Start ride",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 104
+        }
+      }
+    ]
+  },
+  "version": 1
+}

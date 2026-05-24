@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0648D4A38643E9D3A37B708F /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8BD23DCCBAE7BE633EDC0B /* MapView.swift */; };
+		0DE339805EB615F1AA097D17 /* ScoovaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE7A0E88D0E3F2C81F127B8 /* ScoovaAPI.swift */; };
+		10E33ECC2496847ABDBF89CA /* MapLibre in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9B3F4DD24FD7683269DE27 /* MapLibre */; };
+		24B8822BDDD24CF7E4A858D6 /* RideSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FBF17CEA070125330A2753 /* RideSettings.swift */; };
+		2C0FDF9440FB0E55414364CC /* WeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0971E73A161D4A858F29115C /* WeatherForecastView.swift */; };
+		51DE32A8E8FCAC2D1AEB0128 /* scoova-default.json in Resources */ = {isa = PBXBuildFile; fileRef = C73B88A0E420CBC4EA397C9C /* scoova-default.json */; };
+		54E44A87F54D29935170AA05 /* scoova-satellite.json in Resources */ = {isa = PBXBuildFile; fileRef = 0400296A94171F2C4146B6B3 /* scoova-satellite.json */; };
+		55E8F6491ABD5FE2145CF4A6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E35A052B92767AD0A2DE27 /* LocationManager.swift */; };
+		64B91B9F6B62E94FA0B6673C /* MapStyleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AFE33C760267315673F95 /* MapStyleStore.swift */; };
+		66D0B569CC6EA94D22395491 /* Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1CD61AC6C34D4A062ECF7 /* Formatting.swift */; };
+		6789F7090285D2B661BFC247 /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84607CA3C5EE0B2F29D5ADC /* TripStore.swift */; };
+		881FFD0359A6CEDB07DD3764 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39450F61B7B7658BA33B5A5 /* PlanView.swift */; };
+		883B467F74D1EE72F1B8192F /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2956DF9D39C645382CFE969 /* Geocoder.swift */; };
+		96FC6D3DCA3D476B0ED81A30 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD955FC885AAB1B2E710B01 /* OnboardingView.swift */; };
+		985BB646FCEABC919B0E1D3C /* ScoovaStylePatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213ED6E39EA8A210F801AC12 /* ScoovaStylePatcher.swift */; };
+		9C8B7883138370F75A891C79 /* ScoovaRideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2BF7CA543D88D70534CAB /* ScoovaRideApp.swift */; };
+		9FE9F455BC934B078137533E /* ScoovaNavLayerScoovaRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA91DB034FF83B0BBE0A398 /* ScoovaNavLayerScoovaRouting */; };
+		A1F0358E42B291EAAFDC8DD2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197FBC1C5C3FCB07F99C3E53 /* SettingsView.swift */; };
+		AC1897B35866CD6F1FB74BBD /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A408FA235444905DB39FBE56 /* SummaryView.swift */; };
+		ADDEB86EB1A5863EF1176F09 /* RideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F05743C975F76571BE7E076 /* RideModel.swift */; };
+		AF6105599C0BE06272AEA3A0 /* scoova-dark.json in Resources */ = {isa = PBXBuildFile; fileRef = CD9D36A4700223EC4D08BD15 /* scoova-dark.json */; };
+		B7B934E6BC24A50CFA96E065 /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8805CBDB50BE46D949A2151E /* PersonaView.swift */; };
+		C6CCCD7FF2717B5FE54A02D8 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1B651F101581F0C04F8EF /* WeatherClient.swift */; };
+		C812418A690FF14B470D4784 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AAA941B2B73DDAC7D9BCAF /* Profile.swift */; };
+		CAFCF181FFFF237CA0FFE044 /* RideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D583F1BA8C3F957B3C93708 /* RideView.swift */; };
+		D0A5277F90E5204CFF777831 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37304B0FD353771A38845024 /* HistoryView.swift */; };
+		EB5AAC32504AD4F938C5C1A1 /* ScoovaNavLayerUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8E6CFD009C5EFE71A60D0867 /* ScoovaNavLayerUI */; };
+		F6DE45D2A7B6288A34F8AC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813B7C90370B1ED0DA3DAE8A /* Assets.xcassets */; };
+		FAE0C966723B9177AF499603 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7893FB2B67D9A890748902 /* Theme.swift */; };
+		FC24929C8FBD502CFA76C158 /* ScoovaNavLayerCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D37D52FE0935B05D60FABB5 /* ScoovaNavLayerCore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0400296A94171F2C4146B6B3 /* scoova-satellite.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scoova-satellite.json"; sourceTree = "<group>"; };
+		0971E73A161D4A858F29115C /* WeatherForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastView.swift; sourceTree = "<group>"; };
+		197FBC1C5C3FCB07F99C3E53 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		213ED6E39EA8A210F801AC12 /* ScoovaStylePatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoovaStylePatcher.swift; sourceTree = "<group>"; };
+		254AFE33C760267315673F95 /* MapStyleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleStore.swift; sourceTree = "<group>"; };
+		37304B0FD353771A38845024 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		43AAA941B2B73DDAC7D9BCAF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4D583F1BA8C3F957B3C93708 /* RideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideView.swift; sourceTree = "<group>"; };
+		52E35A052B92767AD0A2DE27 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7A8BD23DCCBAE7BE633EDC0B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		813B7C90370B1ED0DA3DAE8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8805CBDB50BE46D949A2151E /* PersonaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
+		8BD955FC885AAB1B2E710B01 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		8F05743C975F76571BE7E076 /* RideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideModel.swift; sourceTree = "<group>"; };
+		9C7893FB2B67D9A890748902 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A408FA235444905DB39FBE56 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		ADE1CD61AC6C34D4A062ECF7 /* Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatting.swift; sourceTree = "<group>"; };
+		B9FBF17CEA070125330A2753 /* RideSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideSettings.swift; sourceTree = "<group>"; };
+		C2956DF9D39C645382CFE969 /* Geocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
+		C2C5919821075AA4846DA023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C3F2BF7CA543D88D70534CAB /* ScoovaRideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoovaRideApp.swift; sourceTree = "<group>"; };
+		C73B88A0E420CBC4EA397C9C /* scoova-default.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scoova-default.json"; sourceTree = "<group>"; };
+		CD0A6CEC267D4778A6D9CAC1 /* scoova-nav-layer-ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "scoova-nav-layer-ios"; path = ..; sourceTree = SOURCE_ROOT; };
+		CD9D36A4700223EC4D08BD15 /* scoova-dark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "scoova-dark.json"; sourceTree = "<group>"; };
+		CEE7A0E88D0E3F2C81F127B8 /* ScoovaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoovaAPI.swift; sourceTree = "<group>"; };
+		D39450F61B7B7658BA33B5A5 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		D84607CA3C5EE0B2F29D5ADC /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
+		EDEDDAD8DC0A00FD3CB41435 /* ScoovaRide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ScoovaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F1B651F101581F0C04F8EF /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D186467D82C7D64C6B6ECED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC24929C8FBD502CFA76C158 /* ScoovaNavLayerCore in Frameworks */,
+				EB5AAC32504AD4F938C5C1A1 /* ScoovaNavLayerUI in Frameworks */,
+				9FE9F455BC934B078137533E /* ScoovaNavLayerScoovaRouting in Frameworks */,
+				10E33ECC2496847ABDBF89CA /* MapLibre in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		022562967AAA8F77CFDB6AF5 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				CD9D36A4700223EC4D08BD15 /* scoova-dark.json */,
+				C73B88A0E420CBC4EA397C9C /* scoova-default.json */,
+				0400296A94171F2C4146B6B3 /* scoova-satellite.json */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		25E4E4915D9C00CA6A40F493 /* ScoovaRide */ = {
+			isa = PBXGroup;
+			children = (
+				813B7C90370B1ED0DA3DAE8A /* Assets.xcassets */,
+				ADE1CD61AC6C34D4A062ECF7 /* Formatting.swift */,
+				C2956DF9D39C645382CFE969 /* Geocoder.swift */,
+				37304B0FD353771A38845024 /* HistoryView.swift */,
+				C2C5919821075AA4846DA023 /* Info.plist */,
+				52E35A052B92767AD0A2DE27 /* LocationManager.swift */,
+				254AFE33C760267315673F95 /* MapStyleStore.swift */,
+				7A8BD23DCCBAE7BE633EDC0B /* MapView.swift */,
+				8BD955FC885AAB1B2E710B01 /* OnboardingView.swift */,
+				8805CBDB50BE46D949A2151E /* PersonaView.swift */,
+				D39450F61B7B7658BA33B5A5 /* PlanView.swift */,
+				43AAA941B2B73DDAC7D9BCAF /* Profile.swift */,
+				8F05743C975F76571BE7E076 /* RideModel.swift */,
+				B9FBF17CEA070125330A2753 /* RideSettings.swift */,
+				4D583F1BA8C3F957B3C93708 /* RideView.swift */,
+				CEE7A0E88D0E3F2C81F127B8 /* ScoovaAPI.swift */,
+				C3F2BF7CA543D88D70534CAB /* ScoovaRideApp.swift */,
+				213ED6E39EA8A210F801AC12 /* ScoovaStylePatcher.swift */,
+				197FBC1C5C3FCB07F99C3E53 /* SettingsView.swift */,
+				A408FA235444905DB39FBE56 /* SummaryView.swift */,
+				9C7893FB2B67D9A890748902 /* Theme.swift */,
+				D84607CA3C5EE0B2F29D5ADC /* TripStore.swift */,
+				F3F1B651F101581F0C04F8EF /* WeatherClient.swift */,
+				0971E73A161D4A858F29115C /* WeatherForecastView.swift */,
+				022562967AAA8F77CFDB6AF5 /* Styles */,
+			);
+			path = ScoovaRide;
+			sourceTree = "<group>";
+		};
+		92B4BC7BCFCCFFD8A7BEB31D /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				CD0A6CEC267D4778A6D9CAC1 /* scoova-nav-layer-ios */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		E3B7087E6E98FE816B8A2FB8 = {
+			isa = PBXGroup;
+			children = (
+				92B4BC7BCFCCFFD8A7BEB31D /* Packages */,
+				25E4E4915D9C00CA6A40F493 /* ScoovaRide */,
+				F999C21353A1F03CB3BC7862 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F999C21353A1F03CB3BC7862 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDEDDAD8DC0A00FD3CB41435 /* ScoovaRide.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EAC4D56571D1C0BFD06A488 /* ScoovaRide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC9AF85DDEE16EF751AC255C /* Build configuration list for PBXNativeTarget "ScoovaRide" */;
+			buildPhases = (
+				152D63C3DD07F7F78CC0003A /* Sources */,
+				BC45E6FC93F8ED45740C50AC /* Resources */,
+				8D186467D82C7D64C6B6ECED /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScoovaRide;
+			packageProductDependencies = (
+				2D37D52FE0935B05D60FABB5 /* ScoovaNavLayerCore */,
+				8E6CFD009C5EFE71A60D0867 /* ScoovaNavLayerUI */,
+				4AA91DB034FF83B0BBE0A398 /* ScoovaNavLayerScoovaRouting */,
+				2F9B3F4DD24FD7683269DE27 /* MapLibre */,
+			);
+			productName = ScoovaRide;
+			productReference = EDEDDAD8DC0A00FD3CB41435 /* ScoovaRide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61949465749A6E1CFAF09BDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 840177E9000E2934218600C4 /* Build configuration list for PBXProject "ScoovaRide" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E3B7087E6E98FE816B8A2FB8;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A0C1DEF210096FA99130A16D /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */,
+				47F28AF971CA5F21044FBE97 /* XCLocalSwiftPackageReference "..//" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F999C21353A1F03CB3BC7862 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EAC4D56571D1C0BFD06A488 /* ScoovaRide */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC45E6FC93F8ED45740C50AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6DE45D2A7B6288A34F8AC90 /* Assets.xcassets in Resources */,
+				AF6105599C0BE06272AEA3A0 /* scoova-dark.json in Resources */,
+				51DE32A8E8FCAC2D1AEB0128 /* scoova-default.json in Resources */,
+				54E44A87F54D29935170AA05 /* scoova-satellite.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		152D63C3DD07F7F78CC0003A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D0B569CC6EA94D22395491 /* Formatting.swift in Sources */,
+				883B467F74D1EE72F1B8192F /* Geocoder.swift in Sources */,
+				D0A5277F90E5204CFF777831 /* HistoryView.swift in Sources */,
+				55E8F6491ABD5FE2145CF4A6 /* LocationManager.swift in Sources */,
+				64B91B9F6B62E94FA0B6673C /* MapStyleStore.swift in Sources */,
+				0648D4A38643E9D3A37B708F /* MapView.swift in Sources */,
+				96FC6D3DCA3D476B0ED81A30 /* OnboardingView.swift in Sources */,
+				B7B934E6BC24A50CFA96E065 /* PersonaView.swift in Sources */,
+				881FFD0359A6CEDB07DD3764 /* PlanView.swift in Sources */,
+				C812418A690FF14B470D4784 /* Profile.swift in Sources */,
+				ADDEB86EB1A5863EF1176F09 /* RideModel.swift in Sources */,
+				24B8822BDDD24CF7E4A858D6 /* RideSettings.swift in Sources */,
+				CAFCF181FFFF237CA0FFE044 /* RideView.swift in Sources */,
+				0DE339805EB615F1AA097D17 /* ScoovaAPI.swift in Sources */,
+				9C8B7883138370F75A891C79 /* ScoovaRideApp.swift in Sources */,
+				985BB646FCEABC919B0E1D3C /* ScoovaStylePatcher.swift in Sources */,
+				A1F0358E42B291EAAFDC8DD2 /* SettingsView.swift in Sources */,
+				AC1897B35866CD6F1FB74BBD /* SummaryView.swift in Sources */,
+				FAE0C966723B9177AF499603 /* Theme.swift in Sources */,
+				6789F7090285D2B661BFC247 /* TripStore.swift in Sources */,
+				C6CCCD7FF2717B5FE54A02D8 /* WeatherClient.swift in Sources */,
+				2C0FDF9440FB0E55414364CC /* WeatherForecastView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4785DE750F94AF4DAEB96C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = ScoovaRide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scoova.ride;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		876F78ADAABA63AE486FBD1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = ScoovaRide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.scoova.ride;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		88A5CF023A69BD5D88BABBB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B74E08D31168795ED0A1BE1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		840177E9000E2934218600C4 /* Build configuration list for PBXProject "ScoovaRide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74E08D31168795ED0A1BE1B /* Debug */,
+				88A5CF023A69BD5D88BABBB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DC9AF85DDEE16EF751AC255C /* Build configuration list for PBXNativeTarget "ScoovaRide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4785DE750F94AF4DAEB96C51 /* Debug */,
+				876F78ADAABA63AE486FBD1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		47F28AF971CA5F21044FBE97 /* XCLocalSwiftPackageReference "..//" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "..//";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A0C1DEF210096FA99130A16D /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D37D52FE0935B05D60FABB5 /* ScoovaNavLayerCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScoovaNavLayerCore;
+		};
+		2F9B3F4DD24FD7683269DE27 /* MapLibre */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0C1DEF210096FA99130A16D /* XCRemoteSwiftPackageReference "maplibre-gl-native-distribution" */;
+			productName = MapLibre;
+		};
+		4AA91DB034FF83B0BBE0A398 /* ScoovaNavLayerScoovaRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScoovaNavLayerScoovaRouting;
+		};
+		8E6CFD009C5EFE71A60D0867 /* ScoovaNavLayerUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScoovaNavLayerUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 61949465749A6E1CFAF09BDF /* Project object */;
+}

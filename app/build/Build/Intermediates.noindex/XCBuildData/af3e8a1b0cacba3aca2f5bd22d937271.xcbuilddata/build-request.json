@@ -1,0 +1,70 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "0a515ce83ebd9cfa8da1f06d19700336dabd24412d25d25f7f94e47bf77e89df"
+    }
+  ],
+  "containerPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/ScoovaRide.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator26.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Products",
+      "derivedDataPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build",
+      "indexDataStoreFolderPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_MODEL" : "iPhone17,3",
+          "ASSETCATALOG_FILTER_FOR_DEVICE_OS_VERSION" : "18.4",
+          "ASSETCATALOG_FILTER_FOR_THINNING_DEVICE_CONFIGURATION" : "iPhone17,3",
+          "BUILD_ACTIVE_RESOURCES_ONLY" : "YES",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "TARGET_DEVICE_IDENTIFIER" : "83E7999B-D7BF-422F-9B98-75ED0CECCC95",
+          "TARGET_DEVICE_MODEL" : "iPhone17,3",
+          "TARGET_DEVICE_OS_VERSION" : "18.4",
+          "TARGET_DEVICE_PLATFORM_NAME" : "iphonesimulator"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

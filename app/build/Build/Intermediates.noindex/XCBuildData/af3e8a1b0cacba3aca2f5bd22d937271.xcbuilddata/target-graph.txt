@@ -1,0 +1,20 @@
+Target dependency graph (8 targets)
+Target 'ScoovaRide' in project 'ScoovaRide'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerUI' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerScoovaRouting' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'MapLibre' in project 'MapLibre Native'
+Target 'MapLibre' in project 'MapLibre Native' (no dependencies)
+Target 'ScoovaNavLayerScoovaRouting' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerScoovaRouting' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+Target 'ScoovaNavLayerScoovaRouting' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+Target 'ScoovaNavLayerUI' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerUI' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+Target 'ScoovaNavLayerUI' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+Target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+➜ Explicit dependency on target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer'
+Target 'ScoovaNavLayerCore' in project 'ScoovaNavLayer' (no dependencies)

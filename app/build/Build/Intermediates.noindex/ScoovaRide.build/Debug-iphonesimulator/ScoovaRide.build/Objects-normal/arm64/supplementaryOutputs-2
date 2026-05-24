@@ -1,0 +1,23 @@
+{
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/ScoovaRide/LocationManager.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/LocationManager.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/LocationManager.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/LocationManager.dia",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/LocationManager.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/LocationManager.swiftdeps"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/ScoovaRide/MapStyleStore.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapStyleStore.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapStyleStore.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapStyleStore.dia",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapStyleStore.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapStyleStore.swiftdeps"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/ScoovaRide/MapView.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapView.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapView.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapView.dia",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapView.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaRide.build/Debug-iphonesimulator/ScoovaRide.build/Objects-normal/arm64/MapView.swiftdeps"
+  }
+}

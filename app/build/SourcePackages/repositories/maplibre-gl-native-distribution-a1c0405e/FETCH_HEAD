@@ -1,0 +1,87 @@
+bb9dd13af893d4471ba12c862853fd59a0c0785e	not-for-merge	branch 'louwers-patch-1' of https://github.com/maplibre/maplibre-gl-native-distribution
+a77943a827433aca8dcacdcaab3edb8e4823650c	not-for-merge	branch 'louwers-patch-2' of https://github.com/maplibre/maplibre-gl-native-distribution
+29832b95254141ccd624306193f04adcf1bd81f2	not-for-merge	branch 'main' of https://github.com/maplibre/maplibre-gl-native-distribution
+7790c11078608bc5af4f259d76d67b4e3130d171	not-for-merge	branch 'pre-release' of https://github.com/maplibre/maplibre-gl-native-distribution
+f5de21d1edd4ce0bd64bff916e3f4064bb628490	not-for-merge	'refs/pull/10/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+8b103cdbeb15f4ad4e78daba5f26f2003eb13039	not-for-merge	'refs/pull/14/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+1d742457d8a9cc0aa6ea8377a9b3a5c0befacde5	not-for-merge	'refs/pull/15/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+667fc20bfaaf37ea5d9402ae479569e0f2e0fc1f	not-for-merge	'refs/pull/16/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+a2ffa826a192729c5c764443837a0a031f749730	not-for-merge	'refs/pull/19/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+c3b825673c8dbfdad5d298b906286f0735936ec7	not-for-merge	'refs/pull/2/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+bb9dd13af893d4471ba12c862853fd59a0c0785e	not-for-merge	'refs/pull/20/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+6cc48528ee2bf65a5aad284e9c5810fb2c0bb3de	not-for-merge	'refs/pull/24/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+a77943a827433aca8dcacdcaab3edb8e4823650c	not-for-merge	'refs/pull/25/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+bc78b684bd4b1e3151889f1dc3f016662300f32f	not-for-merge	'refs/pull/26/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+aa1e3d6cc06310074062b27264a162cbaa323709	not-for-merge	'refs/pull/29/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+530fa45c49f4c864698cbc8e34ab94839233ff01	not-for-merge	'refs/pull/29/merge' of https://github.com/maplibre/maplibre-gl-native-distribution
+22f3d067e43a22c1430e3a3746d2f3d21266ebf3	not-for-merge	'refs/pull/5/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+0b46e9824a4f9a97fbe241e78f2075f32f8f35fa	not-for-merge	'refs/pull/9/head' of https://github.com/maplibre/maplibre-gl-native-distribution
+7eaf6a9741e1a2bd698c4dfc4184cfa138f2aba3	not-for-merge	tag '5.10.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+dc28d9ad9e1b5c52cdeab26e2fe1781db4974e9a	not-for-merge	tag '5.11.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+d524c18d8c572db72c753f88492c36b9749725e1	not-for-merge	tag '5.12.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+f79911a42f605cbaa9eb1ee6330b464eac47569d	not-for-merge	tag '5.12.0-pre.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+4e44c56a54fd3750a24388827f78c8360b0a50f2	not-for-merge	tag '5.12.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+d761956e81e74d8bdbfba31e0ec3a75616190658	not-for-merge	tag '5.12.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+ffda61e298c1490d4860d5184e80d618aaadc089	not-for-merge	tag '5.13.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+a5ed6db2b98483c218f99f9d1cfcaaeac8dd6cc1	not-for-merge	tag '5.13.0-pre.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+046174887276b0c165f149887a3454c67df507dd	not-for-merge	tag '5.9.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+48790d64722b9ee857773e10db74366540c1beba	not-for-merge	tag '6.0.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+1e12849e5daa79f4eb20ca9b353b57fbb98bcd79	not-for-merge	tag '6.0.0-pre9599200f2529de44ba62d4662cddb445dc19397d' of https://github.com/maplibre/maplibre-gl-native-distribution
+2b7bb6f6615457820c617c972b7e424830989b14	not-for-merge	tag '6.1.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+41bdf67afdaa1035b380903096954f9663969431	not-for-merge	tag '6.1.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+77199f45d330884aa0d90089cd12a7b951714e40	not-for-merge	tag '6.10.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+c0b614b41309bc241e9229385b706da9cb7920a7	not-for-merge	tag '6.10.0-pree7bca286e2890ef4ee82809a4ede5fd817750b8f' of https://github.com/maplibre/maplibre-gl-native-distribution
+c508b6ff6de636a1513c59bd51b24ee2c0521e1a	not-for-merge	tag '6.11.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+d518c0ea9389273601b8b030982c9c8f9d370e4f	not-for-merge	tag '6.12.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+78eb7e4fe6c1801319c95fda66f8cbc11f71f8ca	not-for-merge	tag '6.12.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+55c6997875115e4c79b78588fea78ca615cd79b4	not-for-merge	tag '6.12.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+9f250a231a5c47e6f11d9486bc0223c64bbc3314	not-for-merge	tag '6.12.3' of https://github.com/maplibre/maplibre-gl-native-distribution
+f4aad5fff0308a530283c10ede21efa0bdab50f4	not-for-merge	tag '6.13.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+1344095158e809db0512a6f5c81263e107ba5e2d	not-for-merge	tag '6.14.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+d3f842f422ed4ff32b3ae22b28348f7b0e816c40	not-for-merge	tag '6.15.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+48722489aae92e627ea11fe5f5fa9a14d5b8df17	not-for-merge	tag '6.16.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+3808c35c98fffd98e9b48fa19ac8860de757da2d	not-for-merge	tag '6.17.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+b421b028a0f234257f7a1b3f14301970341a3299	not-for-merge	tag '6.17.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+fb0484e78aecbcf11b3f4b11b702df1137a2d747	not-for-merge	tag '6.18.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+b8c16d1af93955abcba9c3ed3e5aff5896a23321	not-for-merge	tag '6.18.0-patch0' of https://github.com/maplibre/maplibre-gl-native-distribution
+ac0f26ed10dbf4cf63a91fcac930180209d69a8d	not-for-merge	tag '6.18.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+ed005c0c95cfceeff2e4c46ffdb30500cec94867	not-for-merge	tag '6.19.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+867e2b84d37d36d2fb375c44d0588f6b44f0c2be	not-for-merge	tag '6.19.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+478bda36c1305f2f04f9237a99951ee336d31a87	not-for-merge	tag '6.19.3' of https://github.com/maplibre/maplibre-gl-native-distribution
+dc9e5ecd5cc177814638689c723ff26cf92009f4	not-for-merge	tag '6.2.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+606a8572b6cc356be88f1963df71967da144447f	not-for-merge	tag '6.20.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+29d67d225dcb56e6dbee4412e8602af7609da5af	not-for-merge	tag '6.20.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+5c10027505c200e8ed9cbfe5eadef57502d54bcf	not-for-merge	tag '6.21.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+136f6fe19bbe8eac58b863a382967bd95737fa26	not-for-merge	tag '6.21.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+40405faced00f636d7af6b801096a12bd841aa8d	not-for-merge	tag '6.22.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+2aefb4dd47ca6e897c93086f348a457839aac2fe	not-for-merge	tag '6.23.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+6f2ab2b2f19e1a5d70567eeef0aabe8fe1aa0ffd	not-for-merge	tag '6.23.1-pre1' of https://github.com/maplibre/maplibre-gl-native-distribution
+0a126513085867cbc0723821f69b78e64f1216ec	not-for-merge	tag '6.24.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+d1a6c1566c443b94e841a4408c84f328bd042a9b	not-for-merge	tag '6.25.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+6c9ca21f6e4358bfc8d3b41b85a538ab876110e7	not-for-merge	tag '6.25.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+49e46137390b651807a472fdbc602786ff947b75	not-for-merge	tag '6.26.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+4254bbf8ad1659ed3748a27227c9675aaa0b0f52	not-for-merge	tag '6.26.0-pre6aa804f7e2f2c91d57e838cca9ddaf14d8101462' of https://github.com/maplibre/maplibre-gl-native-distribution
+2383bd91b4d94519ee5524f0b22b2f7eec846861	not-for-merge	tag '6.3.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+624ad7d75dc7282271e6098c6ab70e65f7ad4cf0	not-for-merge	tag '6.3.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+d6693ba74f866ab91d44453875fa33d21a39bc11	not-for-merge	tag '6.3.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+66ea148ebe6a6dd6957d4a01558ab722f3445936	not-for-merge	tag '6.3.2-pre69190810301b8558cf87143b8e0846ce3bdf2152' of https://github.com/maplibre/maplibre-gl-native-distribution
+715f7e97213abc2d0f09a354087230f381ab7b3f	not-for-merge	tag '6.3.3' of https://github.com/maplibre/maplibre-gl-native-distribution
+d529469789d08775edd8644a7ce2bbe0cb50c148	not-for-merge	tag '6.4.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+f5a685c06aa157941c6849cf417bdf62f058befd	not-for-merge	tag '6.4.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+ba2371636085d097f57d115feae088c45210bd3c	not-for-merge	tag '6.4.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+539c457e19dddce4d77e3011105d3cadbbf0c729	not-for-merge	tag '6.4.3-pre.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+522f981b2eb4e692d01fa73ebb20ab48507c7786	not-for-merge	tag '6.4.3-pre0' of https://github.com/maplibre/maplibre-gl-native-distribution
+ed1320f4b4e14b31c445f5115ebbb43df8ab32d8	not-for-merge	tag '6.4.3-pre2' of https://github.com/maplibre/maplibre-gl-native-distribution
+8333ea2811f27385366039c8661324efab85816d	not-for-merge	tag '6.4.3-pre3' of https://github.com/maplibre/maplibre-gl-native-distribution
+d0ec8203966a1cce8285d1eee1b3336ac0081c68	not-for-merge	tag '6.5.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+bff0cc24590333bf58f4602b8b137e80dbd023d5	not-for-merge	tag '6.5.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+925ab729d1a9da5b7cad79833b5ba253e3eb04c5	not-for-merge	tag '6.5.2' of https://github.com/maplibre/maplibre-gl-native-distribution
+fee2f5d853ca8ebff9bfa5a28952fa4b670230aa	not-for-merge	tag '6.5.3' of https://github.com/maplibre/maplibre-gl-native-distribution
+670b6bb75ca68572660311ffa67d8a5fa1b07328	not-for-merge	tag '6.5.4' of https://github.com/maplibre/maplibre-gl-native-distribution
+ede15a7b728668383e9d952cbc51368c0aad19c2	not-for-merge	tag '6.6.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+57a9fec0b2d9a10f42bdcc41fbb7614042068af8	not-for-merge	tag '6.7.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+6059dc1018240947189730e2d6de7a8480867186	not-for-merge	tag '6.7.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+cd6069c5db0e1aaa293ffdb6f1e5b09013026b36	not-for-merge	tag '6.8.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+2ec7df09bcd6f7ad73ff2bc71c8232b9c1921f25	not-for-merge	tag '6.8.1' of https://github.com/maplibre/maplibre-gl-native-distribution
+7ef2a816f3cbbb0a3212e720883779566f7600b9	not-for-merge	tag '6.9.0' of https://github.com/maplibre/maplibre-gl-native-distribution
+9d7b565b1c0ff2463ab505e21eed43fcc6329615	not-for-merge	tag 'ios-v6.4.3.pre1' of https://github.com/maplibre/maplibre-gl-native-distribution

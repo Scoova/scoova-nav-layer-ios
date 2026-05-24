@@ -1,0 +1,28 @@
+name: CI
+
+# Runs the Scoova Nav Layer SDK unit tests on every push / PR.
+# (The repo is not yet git-initialised — once it is and pushed to
+# GitHub, this workflow runs automatically. It assumes the repo root
+# is `scoova-nav-layer-ios`, where Package.swift lives.)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  sdk-tests:
+    name: SDK unit tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Swift version
+        run: swift --version
+
+      - name: Run SDK tests
+        run: swift test
+
+      # Catches the bug class this suite was built for: a server field
+      # silently not decoded, the cue track laid out wrong, the
+      # threshold tracker never firing. ~30 tests, runs in well under
+      # a second — there is no excuse for it not to be a gate.

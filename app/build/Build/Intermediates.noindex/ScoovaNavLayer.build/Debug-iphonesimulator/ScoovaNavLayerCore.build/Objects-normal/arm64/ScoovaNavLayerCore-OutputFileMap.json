@@ -1,0 +1,109 @@
+{
+  "" : {
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayerCore-primary.dia",
+    "emit-module-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayerCore-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayerCore-primary-emit-module.dia",
+    "pch" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayerCore-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayerCore-primary.swiftdeps"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/AudioReliability.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/AudioReliability~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/CuePhrases.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/CuePhrases~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/GuidanceMonitor.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/GuidanceMonitor~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/HeadingProvider.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/HeadingProvider~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/ManeuverEvent.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ManeuverEvent~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/Motion.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Motion~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/Progression.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/Progression~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/ScoovaNavLayer.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/ScoovaNavLayer~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/SensorRelay.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/SensorRelay~partial.swiftmodule"
+  },
+  "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/Sources/ScoovaNavLayerCore/VoiceEngine.swift" : {
+    "const-values" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.swiftconstvalues",
+    "dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.d",
+    "diagnostics" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.dia",
+    "index-unit-output-path" : "/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.o",
+    "llvm-bc" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.bc",
+    "object" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.o",
+    "swift-dependencies" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine.swiftdeps",
+    "swiftmodule" : "/Volumes/work/My Company/Scoova_W/scoova-nav-layer-ios/app/build/Build/Intermediates.noindex/ScoovaNavLayer.build/Debug-iphonesimulator/ScoovaNavLayerCore.build/Objects-normal/arm64/VoiceEngine~partial.swiftmodule"
+  }
+}

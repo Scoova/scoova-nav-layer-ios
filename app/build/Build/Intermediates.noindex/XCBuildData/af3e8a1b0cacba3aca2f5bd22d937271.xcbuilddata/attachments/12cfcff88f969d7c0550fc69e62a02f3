@@ -1,0 +1,4 @@
+module ScoovaNavLayerCore {
+header "ScoovaNavLayerCore-Swift.h"
+export *
+}

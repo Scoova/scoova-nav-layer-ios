@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>36E5D614-7667-4ED6-A7EA-4F9E1564C575</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>36E5D614-7667-4ED6-A7EA-4F9E1564C575.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ScoovaRide project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ScoovaRide</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project ScoovaRide with scheme ScoovaRide</string>
+			<key>timeStartedRecording</key>
+			<real>800714556.659747</real>
+			<key>timeStoppedRecording</key>
+			<real>800714561.08298802</real>
+			<key>title</key>
+			<string>Building project ScoovaRide with scheme ScoovaRide</string>
+			<key>uniqueIdentifier</key>
+			<string>36E5D614-7667-4ED6-A7EA-4F9E1564C575</string>
+		</dict>
+		<key>FC1B05F7-D073-4037-A284-6569143FEE33</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FC1B05F7-D073-4037-A284-6569143FEE33.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>ScoovaRide project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>ScoovaRide</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project ScoovaRide with scheme ScoovaRide</string>
+			<key>timeStartedRecording</key>
+			<real>800714798.73952401</real>
+			<key>timeStoppedRecording</key>
+			<real>800714802.27801001</real>
+			<key>title</key>
+			<string>Building project ScoovaRide with scheme ScoovaRide</string>
+			<key>uniqueIdentifier</key>
+			<string>FC1B05F7-D073-4037-A284-6569143FEE33</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
