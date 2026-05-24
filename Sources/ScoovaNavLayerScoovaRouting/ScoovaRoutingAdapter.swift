@@ -177,7 +177,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
                 // distance — the only way one heuristic works across
                 // pedestrian / bike / scooter / car at their wildly
                 // different speeds.
-                segmentDurationSeconds: m.time,
+                segmentDurationSeconds: m.time ?? 0,
                 roundaboutExit: sc?.exit ?? m.roundaboutExitCount,
                 // Server-rendered eyes-on-the-road copy — the banner +
                 // voice render these verbatim, falling back to
@@ -371,8 +371,9 @@ private struct RoutingManeuver: Decodable {
     /// Expected seconds to traverse this maneuver's segment. Drives the
     /// SDK's time-based reaffirm spacing — without it, pedestrian rides
     /// get one reaffirm every 5 minutes (the old 450 m heuristic).
-    /// Defaults to 0 so legacy / mocked routes still decode.
-    let time: Double
+    /// Optional so legacy / mocked routes (and older Valhalla responses
+    /// without per-maneuver `time`) still decode; consumers treat nil as 0.
+    let time: Double?
     let beginShapeIndex: Int
     let roundaboutExitCount: Int?
     /// Server-rendered eyes-on-the-road copy. Source of truth for the

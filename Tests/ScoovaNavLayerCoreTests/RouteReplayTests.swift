@@ -104,10 +104,12 @@ final class RouteReplayTests: XCTestCase {
             "off-route speaks the maneuver's recover cue")
     }
 
-    func testKeepGoingIsAChimeNotARepeatedPhrase() {
-        // On a long quiet stretch the "still on track" reassurance must
-        // be the soft chime — never a spoken phrase. Hearing the same
-        // words every 40 s was the monotony the 10 km log exposed.
+    func testKeepGoingSpeaksTheVerbalReassurance() {
+        // On a long quiet stretch the "still on track" reassurance is a
+        // verbal cue, not a silence-chime. Eyes-off riders flagged the
+        // old chime as "the app died." See feedback_subtitle_cue_model
+        // + project_snap_and_reaffirm_2026-05-20: the chime was killed
+        // in favour of a spoken reassurance.
         let nav = ScoovaNavLayer.builder()
             .apiKey("sk_test").locale("en-US").profile("scooter").build()
         var spoken: [String] = []
@@ -119,9 +121,9 @@ final class RouteReplayTests: XCTestCase {
             latitude: 0, longitude: 0, segmentLengthMeters: 300)
         nav.handleGuidanceEvent(.keepGoing, maneuver: m)
 
-        XCTAssertTrue(
-            spoken.isEmpty,
-            "keepGoing plays a non-verbal chime — it must not speak a phrase")
+        XCTAssertEqual(
+            spoken, ["Keep going straight"],
+            "keepGoing speaks the server-rendered verbal reassurance")
     }
 
     func testNothingSpeaksBeforeARouteIsLoaded() {
