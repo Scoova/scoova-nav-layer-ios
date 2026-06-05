@@ -1,0 +1,107 @@
+# Scoova white-label iOS build pipeline.
+#
+# One codebase, N tenants. Each build:
+#   1. fetches the tenant's config (brand, app name, icon, splash, endpoints)
+#      from the platform gateway,
+#   2. applies it via scripts/apply_tenant_config.sh,
+#   3. signs with the tenant's own Apple Developer credentials,
+#   4. uploads to the tenant's own App Store Connect account.
+#
+# We never share signing identities across operators — Apple flags that as
+# spam-clones and bans accounts (this has happened to multiple white-label
+# mobility platforms). The price: one Apple Developer account per operator;
+# the operator pastes their API key in ops.scoo-va.info and the build server
+# uses it from then on.
+
+default_platform(:ios)
+
+# Resolve the tenant slug once per invocation. Required for every lane.
+TENANT_SLUG = ENV["TENANT_SLUG"] || "scoova"
+
+before_all do
+  ensure_env!
+  apply_tenant_config
+end
+
+# ─── Lanes ──────────────────────────────────────────────────────────────
+
+desc "Build a Release archive without uploading (sanity check)"
+lane :build do
+  scheme = "ScoovaRide"
+  gym(
+    project: "app/ScoovaRide.xcodeproj",
+    scheme: scheme,
+    configuration: "Release",
+    export_method: "app-store",
+    output_directory: "build/#{TENANT_SLUG}",
+    silent: true,
+  )
+end
+
+desc "Build + upload to TestFlight under the tenant's Apple Developer account"
+lane :testflight_upload do
+  build
+  api_key = app_store_connect_api_key(
+    key_id:      ENV.fetch("APPLE_KEY_ID"),
+    issuer_id:   ENV.fetch("APPLE_ISSUER_ID"),
+    key_content: ENV.fetch("APPLE_KEY_CONTENT"),  # base64 of the .p8
+    is_key_content_base64: true,
+    in_house: false,
+  )
+  upload_to_testflight(
+    api_key: api_key,
+    skip_waiting_for_build_processing: true,
+    distribute_external: false,
+  )
+  notify_pipeline(status: "uploaded_testflight")
+end
+
+desc "Submit the latest TestFlight build for App Store review"
+lane :submit_for_review do
+  api_key = app_store_connect_api_key(
+    key_id:      ENV.fetch("APPLE_KEY_ID"),
+    issuer_id:   ENV.fetch("APPLE_ISSUER_ID"),
+    key_content: ENV.fetch("APPLE_KEY_CONTENT"),
+    is_key_content_base64: true,
+  )
+  deliver(
+    api_key: api_key,
+    submit_for_review: true,
+    automatic_release: true,
+    force: true,        # skip the HTML preview
+    skip_screenshots: true,
+    skip_metadata: false,
+    precheck_include_in_app_purchases: false,
+  )
+  notify_pipeline(status: "review")
+end
+
+# ─── Helpers ────────────────────────────────────────────────────────────
+
+def ensure_env!
+  %w[APPLE_TEAM_ID APPLE_KEY_ID APPLE_ISSUER_ID APPLE_KEY_CONTENT APP_IDENTIFIER].each do |k|
+    UI.user_error!("Missing env: #{k}") unless ENV[k]
+  end
+end
+
+def apply_tenant_config
+  sh "../scripts/apply_tenant_config.sh #{TENANT_SLUG}"
+end
+
+# Notify the ops-api so the operator's dashboard moves through the
+# build_status states (idle → building → uploaded_testflight → review → live).
+def notify_pipeline(status:)
+  return unless ENV["OPS_API_TOKEN"]
+  require "net/http"; require "json"; require "uri"
+  uri = URI("https://cloud.scoo-va.info/ops-api/v1/ops/internal/build-status")
+  req = Net::HTTP::Post.new(uri, "Content-Type" => "application/json",
+                                  "Authorization" => "Bearer #{ENV["OPS_API_TOKEN"]}")
+  req.body = JSON.dump(
+    tenant_slug: TENANT_SLUG,
+    platform: "ios",
+    status: status,
+  )
+  Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |h| h.request(req) }
+rescue => e
+  UI.important("Pipeline notify failed (non-fatal): #{e.message}")
+end

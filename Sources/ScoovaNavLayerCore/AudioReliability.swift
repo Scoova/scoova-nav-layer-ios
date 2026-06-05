@@ -71,14 +71,23 @@ final class AudioReliability: @unchecked Sendable {
 #if os(iOS)
         let session = AVAudioSession.sharedInstance()
         do {
+            // `.duckOthers` and `.mixWithOthers` are mutually exclusive per
+            // Apple's docs — combining them makes `setCategory` throw
+            // OSStatus -50 (invalid arg), the session never routes for
+            // playback, and EVERY cue plays into a dead session. The
+            // correct pair for nav voice is `[.duckOthers,
+            // .interruptSpokenAudioAndMixWithOthers]`: duck music, mix
+            // with Siri / audiobooks. Riders flagged "no voice at all"
+            // for weeks until this was found.
             try session.setCategory(
                 .playback,
                 mode: .voicePrompt,
-                options: [.duckOthers, .mixWithOthers, .interruptSpokenAudioAndMixWithOthers]
+                options: [.duckOthers, .interruptSpokenAudioAndMixWithOthers]
             )
             try session.setActive(true, options: [])
         } catch {
-            // Voice will still work in many contexts; just no ducking.
+            // Surface — silent failure here is the bug we shipped before.
+            NSLog("🔊 [AudioReliability] activateForCue FAILED: \(error.localizedDescription)")
         }
 #endif
     }

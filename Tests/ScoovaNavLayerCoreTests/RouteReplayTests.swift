@@ -43,6 +43,10 @@ final class RouteReplayTests: XCTestCase {
                           latitude: 0, longitude: 0, segmentLengthMeters: 0),
         ]
         nav.onRoute(route)
+        // Layer defaults to inactive so it doesn't fire cues during a
+        // route preview; this is an end-to-end nav-running test so we
+        // flip it on. Mirrors what NavLayerSession does on Start Nav.
+        nav.setActive(true)
 
         func tick(idx: Int, toManeuver: Double, remaining: Int) {
             nav.onProgress(ProgressEvent(

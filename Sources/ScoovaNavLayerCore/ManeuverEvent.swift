@@ -60,6 +60,25 @@ public enum ManeuverType: String, Sendable, Codable, CaseIterable {
     }
 }
 
+/// One lane on the approach to a maneuver. Left-to-right across the
+/// road. Hosts use these to render a lane-guidance strip under the
+/// banner — only the lanes with `valid: true` lead toward the turn.
+public struct LaneInfo: Codable, Sendable, Equatable {
+    /// Direction the lane is signposted for: "straight", "left",
+    /// "right", "slight-left", "slight-right", "sharp-left",
+    /// "sharp-right", "u-turn", "reverse". Optional because some
+    /// engines emit a lane-bitmap without per-lane labels.
+    public let direction: String?
+    /// `true` if this lane heads toward the upcoming maneuver — the
+    /// rider should be in (or move into) one of these.
+    public let valid: Bool?
+
+    public init(direction: String? = nil, valid: Bool? = nil) {
+        self.direction = direction
+        self.valid = valid
+    }
+}
+
 /// A single maneuver in a route. Adapters reduce their host-SDK steps to
 /// this shape before pushing into `ScoovaNavLayer.onRoute`.
 ///
@@ -143,6 +162,20 @@ public struct ManeuverEvent: Sendable, Equatable {
     public let cueNearMeters: Int?
     /// Raw POI name (no infix) for icon overlays.
     public let landmark: String?
+    /// Landmark POI coordinate — used by the grammar to verify the
+    /// landmark is still AHEAD of the rider before speaking
+    /// "After <X>" / "Turn left at <X>". Nil when no landmark.
+    public let landmarkLat: Double?
+    public let landmarkLon: Double?
+    /// Lane-guidance hints for the upcoming maneuver — left-to-right
+    /// across the road. Hosts render this as a strip under the banner.
+    /// `nil` ⇒ the server didn't ship per-maneuver lane data.
+    public let lanes: [LaneInfo]?
+    /// Posted speed limit (km/h) on the segment leading INTO this
+    /// maneuver. Drives the dynamic ``GuidanceMonitor.slowDown`` cue
+    /// when present, and lets hosts paint a speed-limit pip on the
+    /// puck. `nil` ⇒ server didn't ship a limit.
+    public let speedLimitKph: Int?
 
     public init(
         index: Int,
@@ -173,7 +206,11 @@ public struct ManeuverEvent: Sendable, Equatable {
         cueFarMeters: Int? = nil,
         cueMidMeters: Int? = nil,
         cueNearMeters: Int? = nil,
-        landmark: String? = nil
+        landmark: String? = nil,
+        landmarkLat: Double? = nil,
+        landmarkLon: Double? = nil,
+        lanes: [LaneInfo]? = nil,
+        speedLimitKph: Int? = nil
     ) {
         self.index = index
         self.total = total
@@ -204,6 +241,10 @@ public struct ManeuverEvent: Sendable, Equatable {
         self.cueMidMeters = cueMidMeters
         self.cueNearMeters = cueNearMeters
         self.landmark = landmark
+        self.landmarkLat = landmarkLat
+        self.landmarkLon = landmarkLon
+        self.lanes = lanes
+        self.speedLimitKph = speedLimitKph
     }
 }
 

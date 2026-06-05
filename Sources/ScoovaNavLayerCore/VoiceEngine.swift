@@ -107,9 +107,16 @@ final class VoiceEngine: NSObject, @unchecked Sendable {
         spatialPan: Float = 0,
         id: String? = nil
     ) -> Bool {
-        guard voiceEnabled else { return false }
+        guard voiceEnabled else {
+            NSLog("🔇 [Voice] say BLOCKED — voiceEnabled=false (text=\"\(text.prefix(40))\")")
+            return false
+        }
         let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return false }
+        guard !trimmed.isEmpty else {
+            NSLog("🔇 [Voice] say BLOCKED — empty text")
+            return false
+        }
+        NSLog("🔊 [Voice] say → \"\(trimmed.prefix(60))\" tone=\(tone) pan=\(spatialPan) pack=\(voicePack == nil ? "nil" : "yes") locale=\(locale)")
 
         let now = Date().timeIntervalSince1970 * 1000
         // While the previous cue is still being spoken, a new cue must
@@ -120,6 +127,13 @@ final class VoiceEngine: NSObject, @unchecked Sendable {
             guard tone.priority > currentTone.priority else { return false }
             synth.stopSpeaking(at: .immediate)
             playerNode.stop()
+            // Critical: ALSO stop any in-flight dialect-clip playback.
+            // Otherwise a higher-priority TTS cue starts on top of an
+            // already-playing voicepack clip and the rider hears two
+            // overlapping voices. (Bug riders flagged as "mixed cues
+            // at the same time" on 2026-05-28.)
+            clipSeqPlayer?.stop()
+            clipSeqPlayer = nil
         }
 
         // Reactivate session in case we were interrupted (phone call) since
@@ -168,8 +182,10 @@ final class VoiceEngine: NSObject, @unchecked Sendable {
         // the spatial path falls back to plain speech.
         let pan = max(-1, min(1, spatialPan))
         if spatialEnabled, pan != 0, Self.spatialSupported, #available(iOS 16.0, *) {
+            NSLog("🔊 [Voice] path=spatial voice=\(utt.voice?.language ?? "nil")")
             speakSpatial(utt, pan: pan)
         } else {
+            NSLog("🔊 [Voice] path=plain voice=\(utt.voice?.language ?? "nil") rate=\(utt.rate) volume=\(utt.volume)")
             synth.speak(utt)
         }
 
@@ -364,6 +380,7 @@ final class VoiceEngine: NSObject, @unchecked Sendable {
 extension VoiceEngine: AVSpeechSynthesizerDelegate {
     public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
                                   didStart utterance: AVSpeechUtterance) {
+        NSLog("🔊 [Voice] didStart \"\(utterance.speechString.prefix(40))\" voice=\(utterance.voice?.language ?? "nil")")
         if pendingThresholdCrossedAt > 0 {
             let nowMs = Date().timeIntervalSince1970 * 1000
             lastCueLatencyMs = Int64(nowMs - pendingThresholdCrossedAt)
@@ -373,6 +390,7 @@ extension VoiceEngine: AVSpeechSynthesizerDelegate {
 
     public func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
                                   didFinish utterance: AVSpeechUtterance) {
+        NSLog("🔊 [Voice] didFinish \"\(utterance.speechString.prefix(40))\"")
         // The cue finished — if it ran shorter than the estimate, free
         // the channel now so the next cue isn't needlessly held back.
         if utterance === currentUtterance {

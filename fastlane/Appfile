@@ -1,0 +1,14 @@
+# Per-tenant Apple credentials are read from environment at runtime — never
+# hard-coded here. The build runner exports:
+#   TENANT_SLUG          e.g. "scoova"   (drives the config overlay)
+#   APP_IDENTIFIER       e.g. "com.scoova.ride"
+#   APPLE_TEAM_ID        the operator's Apple Developer Team ID
+#   APPLE_ISSUER_ID      App Store Connect API key issuer
+#   APPLE_KEY_ID         App Store Connect API key id
+#   APPLE_KEY_CONTENT    p8 contents (base64-decoded by lane below)
+#
+# Each operator's credentials live encrypted on the Phoenix build host; the
+# pipeline pulls them at the start of each lane.
+
+app_identifier ENV["APP_IDENTIFIER"] || "com.scoova.ride"
+team_id        ENV["APPLE_TEAM_ID"]
