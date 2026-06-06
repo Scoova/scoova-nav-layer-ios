@@ -2,6 +2,33 @@
 
 All notable changes to ScoovaNavLayer (iOS).
 
+## [1.0.1] — 2026-06-06
+
+First CocoaPods publish. The 1.0.0 git tag landed but never made it to
+`pod trunk push`, so 1.0.1 is effectively the SDK's first published
+version across all three pods (`ScoovaNavLayerCore`, `ScoovaNavLayerUI`,
+`ScoovaNavLayerScoovaRouting`).
+
+### Guidance
+- Persona + heading-aware off-route — sidewalk-parallel walking 15-25 m
+  off the routed centerline no longer false-fires wrong-way. Drift /
+  off-route thresholds scale by costing (pedestrian 60 m vs auto 30 m);
+  GPS bearing matching segment bearing within 35° suppresses drift +
+  off-route entirely. Voice silence-filler says "N metres to the next
+  turn" (matches the banner) instead of "to your destination" (which
+  was a different number from the banner).
+- Side-aware street counting — "take the second right" now counts only
+  RIGHT-side streets via the routing adapter's `trace_cross_streets`
+  L/R/LR tagging. Previously counted both sides, producing the wrong
+  ordinal and an early turn.
+- Cue-bunching fix — landmark-proxy trims far/mid cues when the run-up
+  into a turn is too short; no more cluster of cues at route start.
+
+### Routing adapter
+- Richer corridor data parsing in `ScoovaRoutingAdapter` for upcoming
+  guidance-reasoner work (graph fingerprints, per-maneuver cross-street
+  list, ambiguity flags).
+
 ## [1.0.0] — unreleased
 
 First packaged release — the eyes-off navigation engine.

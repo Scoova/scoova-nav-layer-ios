@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
   s.name             = "ScoovaNavLayerUI"
   s.module_name      = "ScoovaNavLayerUI"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Scoova Nav Layer — SwiftUI components."
   s.description      = "Drop-in SwiftUI banner (ScoovaManeuverBanner), heading puck (ScoovaHeadingPuck), and route preview card."
   s.homepage         = "https://scoo-va.info"

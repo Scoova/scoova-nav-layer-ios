@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "ScoovaNavLayerCore"
   s.module_name      = "ScoovaNavLayerCore"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Scoova Nav Layer — voice + cues core."
   s.description      = "Dialect-aware turn-by-turn voice engine, eyes-off cue grammar, spatial audio panning, chain-absorb, sensor-fused heading."
   s.homepage         = "https://scoo-va.info"

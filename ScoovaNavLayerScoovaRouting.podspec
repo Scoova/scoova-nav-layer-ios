@@ -4,7 +4,7 @@
 Pod::Spec.new do |s|
   s.name             = "ScoovaNavLayerScoovaRouting"
   s.module_name      = "ScoovaNavLayerScoovaRouting"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Scoova Nav Layer — Scoova routing adapter."
   s.description      = "Bridges Scoova's routing API (rich scoova.* voice + banner blocks) into ScoovaNavLayer's maneuver feed."
   s.homepage         = "https://scoo-va.info"
