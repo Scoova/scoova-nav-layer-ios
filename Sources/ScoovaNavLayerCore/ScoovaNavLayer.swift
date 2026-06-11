@@ -1161,15 +1161,27 @@ public final class ScoovaNavLayer: @unchecked Sendable {
         // on was the right one in the first place.
         let wasWelcomed = welcomed
         if !welcomed {
-            NSLog("🟢 [Nav] firing WELCOME (isActive=\(isActive), maneuvers=\(maneuvers.count), routeEyesOff=\(routeEyesOff))")
+            // Visibility into welcome-cue selection — every welcome path is
+            // logged so we can tell whether the server-rendered welcome was
+            // missing (server didn't ship one), empty (decode succeeded but
+            // value was ""), or substituted by the SDK fallback. Without
+            // these logs the rider just hears a sub-second "Let's go" and
+            // assumes the first navigation cue was the welcome.
+            let hasWelcomeFull = (tripScoovaState?["welcomeFull"]?.isEmpty == false)
+            let hasShortWelcome = (tripScoovaState?["welcome"]?.isEmpty == false)
+            NSLog("🟢 [Nav] firing WELCOME (isActive=\(isActive), maneuvers=\(maneuvers.count), routeEyesOff=\(routeEyesOff)) "
+                  + "hasWelcomeFull=\(hasWelcomeFull) hasShortWelcome=\(hasShortWelcome) "
+                  + "stateKeys=\(tripScoovaState.map { Array($0.keys).sorted() } ?? [])")
             welcomed = true
             // Prefer server-rendered welcome — fall back to the hardcoded
             // distance-bearing phrase when no scoova block was forwarded.
             let serverWelcome = tripScoovaState?["welcomeFull"]
                 ?? tripScoovaState?["welcome"]
             let phrase: String
+            let source: String
             if let serverWelcome = serverWelcome, !serverWelcome.isEmpty {
                 phrase = serverWelcome
+                source = (tripScoovaState?["welcomeFull"]?.isEmpty == false) ? "server.welcomeFull" : "server.welcome"
             } else if routeEyesOff {
                 // Eye-on-the-road: the metre-based welcomeText
                 // ("Your trip is 400 meters, 1 minute, with 3 turns.
@@ -1179,9 +1191,12 @@ public final class ScoovaNavLayer: @unchecked Sendable {
                 // rather than violate the contract. See
                 // [[feedback-eyesoff-cue-grammar]].
                 phrase = "Let's go."
+                source = "sdk.fallback.eyesoff"
             } else {
                 phrase = welcomeText(lang: locale, distanceKm: Double(p.metersRemaining) / 1000)
+                source = "sdk.fallback.eyeson"
             }
+            NSLog("🟢 [Nav] WELCOME phrase[\(source)]: \"\(phrase)\"")
             saySpoken(phrase, tone: .calm)
         }
 

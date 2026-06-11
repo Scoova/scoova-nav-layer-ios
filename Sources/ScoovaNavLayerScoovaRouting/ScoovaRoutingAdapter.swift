@@ -77,6 +77,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
     private var lastLanguage: String = "en-US"
     private var lastLandmarks: Bool = true
     private var lastEyesOff: Bool = false
+    private var lastUnits: String = "kilometers"
     private var lastLat: Double?
     private var lastLon: Double?
     private var lastBearingDeg: Float?
@@ -168,6 +169,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
         language: String = "en-US",
         landmarks: Bool = true,
         eyesOff: Bool = false,
+        units: String = "kilometers",
         bearingDeg: Float? = nil,
         isReroute: Bool = false
     ) async throws -> [[Double]] {
@@ -178,7 +180,16 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
         lastLanguage = language
         lastLandmarks = landmarks
         lastEyesOff = eyesOff
+        lastUnits = units
 
+        // Measurement system reaches the landmark-proxy under
+        // `directions_options.units` (Valhalla's canonical location;
+        // proxy also accepts top-level `units`). Honoured by every
+        // distance string in the cue stream — welcome briefing, far/
+        // mid/near approach cues, "in X metres / yards" reaffirms,
+        // and the "X to your destination" silence-filler. Anything
+        // other than "miles"/"imperial"/"mile"/"mi" is treated as
+        // metric on the server.
         var payload: [String: Any] = [
             "locations": [
                 ["lat": from.lat, "lon": from.lon],
@@ -188,6 +199,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
             "language": language,
             "simplified_instructions": true,
             "landmarks": landmarks,
+            "directions_options": ["units": units, "language": language],
         ]
         // Eyes-off → the landmark-proxy swaps to measurement-free,
         // landmark/sequence-led copy. Key is camelCase `voiceMode`,
@@ -219,11 +231,25 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
             payload["locations"] = locations
         }
 
-        var req = URLRequest(url: routingURL)
+        // Route responses must NEVER come from URLCache. URLSession.shared
+        // backs onto URLCache.shared, which persists POST responses to disk
+        // and survives app launches — riders kept hearing server-side cue
+        // fixes only after manually wiping the simulator because every
+        // subsequent kill+relaunch served the original disk-cached route.
+        // Server-side state (landmarks, road graph, costing tweaks,
+        // language packs) is the source of truth; we always want the
+        // current one, not the snapshot from days ago.
+        var req = URLRequest(url: routingURL,
+                             cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                             timeoutInterval: 30)
         req.httpMethod = "POST"
         req.setValue(apiKey, forHTTPHeaderField: "X-API-Key")
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         req.setValue("scoova-nav-layer/1.0 (ios)", forHTTPHeaderField: "User-Agent")
+        // Belt-and-braces: tell any intermediate cache (CF, ISP proxy, on-
+        // device URLCache) to skip the lookup AND skip writing the response.
+        req.setValue("no-store, no-cache", forHTTPHeaderField: "Cache-Control")
+        req.setValue("no-cache", forHTTPHeaderField: "Pragma")
         req.httpBody = try JSONSerialization.data(withJSONObject: payload, options: [])
 
         let (data, resp) = try await URLSession.shared.data(for: req)
@@ -363,6 +389,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
             let language = self.lastLanguage
             let landmarks = self.lastLandmarks
             let eyesOff = self.lastEyesOff
+            let units = self.lastUnits
             // Reroute payload visibility — see product memory:
             // log-every-point-during-ride. The user surfaced bugs
             // where the new route went toward the destination
@@ -392,6 +419,7 @@ public final class ScoovaRoutingAdapter: @unchecked Sendable {
                     language: language,
                     landmarks: landmarks,
                     eyesOff: eyesOff,
+                    units: units,
                     bearingDeg: bearing,
                     isReroute: true
                 )

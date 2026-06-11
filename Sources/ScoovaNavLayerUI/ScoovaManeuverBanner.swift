@@ -47,15 +47,28 @@ public struct ScoovaManeuverBanner: View {
             HStack(spacing: 14) {
                 ArrowChip(type: cue.maneuver.type, color: style.accent)
                 VStack(alignment: .leading, spacing: 4) {
+                    // Allow the title to wrap to two lines AND scale
+                    // down to 85 % of its size before truncating —
+                    // "Turn right onto West 45th Street" was getting
+                    // cut to "Turn right onto West 45t…" on the
+                    // iPhone Mini width, so the rider couldn't see
+                    // the street name. Two-line wrap covers most
+                    // names; the minimumScaleFactor kicks in for the
+                    // very long ones ("6th Avenue / Avenue of the
+                    // Americas") so they fit on a single line at a
+                    // slightly smaller weight rather than wrap.
                     Text(primary)
                         .font(.system(size: 19, weight: .bold))
                         .foregroundStyle(style.text)
-                        .lineLimit(1)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.85)
+                        .multilineTextAlignment(.leading)
                     if let anchor = anchor {
                         Text(anchor)
                             .font(.system(size: 13, weight: .medium))
                             .foregroundStyle(style.muted)
-                            .lineLimit(1)
+                            .lineLimit(2)
+                            .minimumScaleFactor(0.9)
                     }
                     if cue.metersToManeuver.isFinite && cue.metersToManeuver > 5 {
                         Text(formatDistance(cue.metersToManeuver))
