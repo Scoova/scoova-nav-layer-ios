@@ -3,12 +3,16 @@
 # apply_tenant_config.sh
 # Fetch the tenant's runtime config from the platform gateway and overlay it
 # onto the iOS project before Fastlane builds:
-#   • PRODUCT_BUNDLE_IDENTIFIER  (from tenant_apps.bundle_id)
+#   • PRODUCT_BUNDLE_IDENTIFIER  (from $BUNDLE_ID env, falls back to default)
 #   • Info.plist:
 #       SCOOVA_TENANT_SLUG
 #       SCOOVA_NOSQL_API_KEY
 #       SCOOVA_MONITOR_API_KEY
 #       CFBundleDisplayName
+#   • Assets.xcassets:
+#       AccentColor.colorset   ← branding.accentColor
+#       BrandColor.colorset    ← branding.primaryColor
+#       ScoovaLogo.imageset    ← branding.logoUrl (downloaded; @1x only)
 #   • App icon (AppIcon.appiconset) — replaced wholesale from icons.zip
 #   • Splash asset (LaunchScreen) — same idea
 #
@@ -43,25 +47,26 @@ if [[ -z "$CFG" ]]; then
 fi
 
 # All shell-side parsing goes through python so we avoid pulling jq.
-get() { python3 -c "import sys, json; d = json.loads(sys.argv[1]).get('data', {}); k = sys.argv[2].split('.'); v=d
-for s in k: v = v.get(s) if isinstance(v, dict) else None
+# Wire format: {"success":true,"data":{"configJson":{...}}}
+get() { python3 -c "import sys, json
+d = json.loads(sys.argv[1]).get('data', {}).get('configJson', {})
+k = sys.argv[2].split('.')
+v = d
+for s in k:
+    if isinstance(v, dict): v = v.get(s)
+    else: v = None
 print('' if v is None else v)" "$CFG" "$1"; }
 
-TENANT_NAME=$(get name)
-APP_NAME=$(python3 -c "import json,sys
-d=json.loads(sys.argv[1])['data']
-for a in d['apps']:
-  if a['platform']=='ios':
-    print(a.get('appName') or d['name']); break
-else: print(d['name'])
-" "$CFG")
-BUNDLE_ID=$(python3 -c "import json,sys
-d=json.loads(sys.argv[1])['data']
-for a in d['apps']:
-  if a['platform']=='ios':
-    print(a['bundleId']); break
-" "$CFG")
-echo "→ tenant=$TENANT_SLUG  app='$APP_NAME'  bundle=$BUNDLE_ID"
+APP_NAME=$(get strings.appName)
+[[ -z "$APP_NAME" ]] && APP_NAME="Scoova"
+# Bundle ID is NOT in the public config response (we keep that to
+# safe-to-publish fields only). Build runners pass it via $BUNDLE_ID;
+# otherwise we keep whatever the project file already has.
+BUNDLE_ID="${BUNDLE_ID:-}"
+BRAND_PRIMARY=$(get branding.primaryColor)
+BRAND_ACCENT=$(get branding.accentColor)
+LOGO_URL=$(get branding.logoUrl)
+echo "→ tenant=$TENANT_SLUG  app='$APP_NAME'  primary=$BRAND_PRIMARY  accent=$BRAND_ACCENT"
 
 # 2. Overlay Bundle ID into the Xcode project (sed in place — boring but
 #    works without xcodeproj-gem).
@@ -83,7 +88,84 @@ plist_set "CFBundleDisplayName"     "$APP_NAME"
 [[ -n "${SCOOVA_NOSQL_API_KEY:-}"   ]] && plist_set "SCOOVA_NOSQL_API_KEY"   "$SCOOVA_NOSQL_API_KEY"
 [[ -n "${SCOOVA_MONITOR_API_KEY:-}" ]] && plist_set "SCOOVA_MONITOR_API_KEY" "$SCOOVA_MONITOR_API_KEY"
 
-# 4. Optional: pull tenant icons + splash from the ops vault if creds present.
+# 4. Overlay brand colors into the asset catalog. Idempotent — each run
+#    overwrites the Contents.json from scratch. The colorset is created
+#    if it doesn't exist; SwiftUI's `Color("BrandColor")` and the system
+#    AccentColor both pick this up at build time, no source change.
+ASSETS_DIR="$APP_DIR/Assets.xcassets"
+write_colorset() {
+  local name="$1"
+  local hex="$2"
+  [[ -z "$hex" ]] && return 0
+  local dir="$ASSETS_DIR/$name.colorset"
+  # #RRGGBB → r,g,b components as 0.xxx floats (Xcode wire format).
+  local r
+  local g
+  local b
+  r=$(printf '%d' 0x${hex:1:2})
+  g=$(printf '%d' 0x${hex:3:2})
+  b=$(printf '%d' 0x${hex:5:2})
+  local rf
+  local gf
+  local bf
+  rf=$(python3 -c "print(f'{$r/255:.3f}')")
+  gf=$(python3 -c "print(f'{$g/255:.3f}')")
+  bf=$(python3 -c "print(f'{$b/255:.3f}')")
+  mkdir -p "$dir"
+  cat > "$dir/Contents.json" <<JSON
+{
+  "colors" : [
+    {
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "$bf",
+          "green" : "$gf",
+          "red" : "$rf"
+        }
+      },
+      "idiom" : "universal"
+    }
+  ],
+  "info" : { "author" : "xcode", "version" : 1 }
+}
+JSON
+}
+write_colorset "AccentColor" "$BRAND_ACCENT"
+write_colorset "BrandColor"  "$BRAND_PRIMARY"
+[[ -n "$BRAND_PRIMARY" || -n "$BRAND_ACCENT" ]] && echo "→ applied brand colors"
+
+# 5. Overlay tenant logo into ScoovaLogo.imageset. We only ship @1x —
+#    Xcode picks it for every scale and downsizes; tenants rarely have
+#    proper 3x retina assets so we degrade gracefully. Skipped silently
+#    if logoUrl is null (tenant hasn't uploaded one yet).
+if [[ -n "$LOGO_URL" ]]; then
+  LOGO_SET="$ASSETS_DIR/ScoovaLogo.imageset"
+  mkdir -p "$LOGO_SET"
+  TMP_LOGO=$(mktemp -t scoova-logo).png
+  if curl -sfL "$LOGO_URL" -o "$TMP_LOGO" && [[ -s "$TMP_LOGO" ]]; then
+    rm -f "$LOGO_SET"/scoova-logo*.png
+    cp "$TMP_LOGO" "$LOGO_SET/scoova-logo.png"
+    cat > "$LOGO_SET/Contents.json" <<'JSON'
+{
+  "images" : [
+    { "filename" : "scoova-logo.png", "idiom" : "universal", "scale" : "1x" },
+    { "idiom" : "universal", "scale" : "2x" },
+    { "idiom" : "universal", "scale" : "3x" }
+  ],
+  "info" : { "author" : "xcode", "version" : 1 },
+  "properties" : { "template-rendering-intent" : "template" }
+}
+JSON
+    echo "→ applied tenant logo ($LOGO_URL)"
+  else
+    echo "→ logoUrl set but download failed; keeping default logo"
+  fi
+  rm -f "$TMP_LOGO"
+fi
+
+# 6. Optional: pull tenant icons + splash from the ops vault if creds present.
 #    The endpoint returns a zip we can unpack straight over the asset catalog.
 if [[ -n "${OPS_API_TOKEN:-}" ]]; then
   ASSETS_URL="${GATEWAY%/}/ops-api/v1/ops/internal/tenant-assets-zip"
