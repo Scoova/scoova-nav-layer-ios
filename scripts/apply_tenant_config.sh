@@ -14,6 +14,10 @@
 #       BrandColor.colorset    ← branding.primaryColor
 #       ScoovaLogo.imageset    ← branding.logoUrl (downloaded; @1x only)
 #       AppIcon.appiconset     ← branding.iconUrl (downloaded → 1024×1024)
+#   • Resources/tenant_config.json — full /tenant/{slug}/config snapshot
+#                                    so a first-launch-offline boot is
+#                                    fully tenant-branded (no Scoova
+#                                    fallback flash before network arrives)
 #   • Splash asset (LaunchScreen) — pulled from ops vault when present
 #
 # Inputs (env vars set by the build runner):
@@ -220,5 +224,16 @@ if [[ -n "${OPS_API_TOKEN:-}" ]]; then
   fi
   rm -f "$TMP_ZIP"
 fi
+
+# 8. Bundled tenant_config.json — the same envelope that the runtime
+#    fetch consumes, baked into the IPA. ScoovaTenantConfig prefers the
+#    server response, falls back to UserDefaults cache, then to this
+#    file, then to the hardcoded Scoova default. So a first-ever launch
+#    in airplane mode on a fresh install still boots with the operator's
+#    colours + copy.
+RES_DIR="$APP_DIR/Resources"
+mkdir -p "$RES_DIR"
+echo "$CFG" > "$RES_DIR/tenant_config.json"
+echo "→ bundled $(wc -c < "$RES_DIR/tenant_config.json") bytes of tenant_config.json for offline first-launch"
 
 echo "✅ tenant config applied for $TENANT_SLUG"
