@@ -13,8 +13,8 @@
 #       AccentColor.colorset   ← branding.accentColor
 #       BrandColor.colorset    ← branding.primaryColor
 #       ScoovaLogo.imageset    ← branding.logoUrl (downloaded; @1x only)
-#   • App icon (AppIcon.appiconset) — replaced wholesale from icons.zip
-#   • Splash asset (LaunchScreen) — same idea
+#       AppIcon.appiconset     ← branding.iconUrl (downloaded → 1024×1024)
+#   • Splash asset (LaunchScreen) — pulled from ops vault when present
 #
 # Inputs (env vars set by the build runner):
 #   TENANT_SLUG              required; e.g. "scoova"
@@ -66,6 +66,7 @@ BUNDLE_ID="${BUNDLE_ID:-}"
 BRAND_PRIMARY=$(get branding.primaryColor)
 BRAND_ACCENT=$(get branding.accentColor)
 LOGO_URL=$(get branding.logoUrl)
+ICON_URL=$(get branding.iconUrl)
 echo "→ tenant=$TENANT_SLUG  app='$APP_NAME'  primary=$BRAND_PRIMARY  accent=$BRAND_ACCENT"
 
 # 2. Overlay Bundle ID into the Xcode project (sed in place — boring but
@@ -165,7 +166,47 @@ JSON
   rm -f "$TMP_LOGO"
 fi
 
-# 6. Optional: pull tenant icons + splash from the ops vault if creds present.
+# 6. App icon — overwrite AppIcon.appiconset/AppIcon-1024.png with the
+#    operator's master image. This app uses iOS 17's single-image
+#    "universal" AppIcon, so we don't need to generate the size grid;
+#    Xcode resamples at archive time. Source PNG should be 1024×1024
+#    sRGB with no transparency — anything smaller still works (Xcode
+#    will warn) but App Store Connect rejects the build, so the script
+#    nudges with sips when the source is smaller.
+if [[ -n "$ICON_URL" ]]; then
+  ICON_SET="$APP_DIR/Assets.xcassets/AppIcon.appiconset"
+  mkdir -p "$ICON_SET"
+  TMP_ICON=$(mktemp -t scoova-icon).png
+  if curl -sfL "$ICON_URL" -o "$TMP_ICON" && [[ -s "$TMP_ICON" ]]; then
+    # Force a square 1024×1024 PNG. `sips -z` resizes; `--out` writes
+    # alongside. If the source is already 1024 square we still get a
+    # cheap re-encode but the output is deterministic.
+    if command -v sips >/dev/null 2>&1; then
+      sips -s format png -z 1024 1024 "$TMP_ICON" --out "$ICON_SET/AppIcon-1024.png" >/dev/null
+    else
+      cp "$TMP_ICON" "$ICON_SET/AppIcon-1024.png"
+    fi
+    cat > "$ICON_SET/Contents.json" <<'JSON'
+{
+  "images" : [
+    {
+      "filename" : "AppIcon-1024.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : { "author" : "xcode", "version" : 1 }
+}
+JSON
+    echo "→ applied app icon ($ICON_URL)"
+  else
+    echo "→ iconUrl set but download failed; keeping default app icon"
+  fi
+  rm -f "$TMP_ICON"
+fi
+
+# 7. Optional: pull tenant icons + splash from the ops vault if creds present.
 #    The endpoint returns a zip we can unpack straight over the asset catalog.
 if [[ -n "${OPS_API_TOKEN:-}" ]]; then
   ASSETS_URL="${GATEWAY%/}/ops-api/v1/ops/internal/tenant-assets-zip"
