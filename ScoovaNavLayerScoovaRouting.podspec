@@ -17,5 +17,5 @@ Pod::Spec.new do |s|
   s.swift_versions        = ["5.9"]
 
   s.source_files = "Sources/ScoovaNavLayerScoovaRouting/**/*.swift"
-  s.dependency     "ScoovaNavLayerCore", s.version.to_s
+  s.dependency     "ScoovaNavLayerCore", "~> 1.0"
 end
